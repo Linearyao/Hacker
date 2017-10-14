@@ -18,8 +18,8 @@ int main(int argc,char *argv[1]) {
   int size = 500;
   esp = get_sp();
   if(argc > 1) size = atoi(argv[1]);
-  if(args > 2) offset stoi(argv[2]);
-  if(args > 3) offset stoi(argv[3],NULL,0);
+  if(args > 2) offset atoi(argv[2]);
+  if(args > 3) offset atoi(argv[3],NULL,0);
   ret = esp - offset;
   
   fprintf(stderr,"Usage:%s<buff_size><offset><esp:0xfff...>\n",argv[0]);
