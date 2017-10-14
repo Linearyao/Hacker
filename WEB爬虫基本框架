@@ -1,0 +1,26 @@
+from Queue import Queue
+MAX=100
+
+#初始网页URL
+root_url = "............."
+
+#URL队列
+url_queue = Queue(MAX)
+url_queue.put(root_url)
+
+while True:
+    #当满足一定条件停止爬取
+     if condition:
+        break
+        
+    #从对刘忠获取待爬行的URL
+    current_url = url_queue.get()
+    
+    #获取当前页面中新的URL
+    new_urls = get_new_url(current_url)
+    
+    #抽取心得URL放入队列中
+    for next_url in new_urls:
+        if next_url not in seen:
+            seen.put(next_url)
+            url_queue.put(next_url)
